@@ -26,12 +26,12 @@ int main()
     init_display();
     init_drawing();
 
-    while (true)
-    {
-        clear_buffer();
-        write_message("ABCDEF/GHIJKLM/NOPQRS/TUVWXYZ/1234567890", 40, SCREEN_WIDTH/2 + 20, SCREEN_HEIGHT/2 + 50, 20, get_buffer());
-        display_buffer();
-    }
+    // while (true)
+    // {
+    //     clear_buffer();
+    //     write_message("ABCDEF/GHIJKLM/NOPQRS/TUVWXYZ/1234567890", 40, SCREEN_WIDTH/2 + 20, SCREEN_HEIGHT/2 + 50, 20, get_buffer());
+    //     display_buffer();
+    // }
     
 
     // while (true)
@@ -45,7 +45,7 @@ int main()
     // while (true)
     // {
     //     clear_buffer();
-    //     make_gradient(get_buffer());
+    //     make_gradient(50, get_buffer());
     //     display_buffer();
     // }
     
