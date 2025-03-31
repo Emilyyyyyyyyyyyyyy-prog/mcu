@@ -35,7 +35,7 @@ pico_sdk_init()
 
 # Add executable. Default name is the project name, version 0.1
 
-add_executable(portable_device portable_device.c ili9341.h ili9341.c text_message.h text_message.c)
+add_executable(portable_device portable_device.c)
 
 pico_set_program_name(portable_device "portable_device")
 pico_set_program_version(portable_device "0.1")
@@ -56,7 +56,13 @@ target_include_directories(portable_device PRIVATE
 # Add any user requested libraries
 target_link_libraries(portable_device 
         hardware_spi
+        ili9341
+        bme
+        text_message
         )
 
 pico_add_extra_outputs(portable_device)
 
+add_subdirectory("${PROJECT_SOURCE_DIR}/ili9341" "${PROJECT_BINARY_DIR}/ili9341")
+add_subdirectory("${PROJECT_SOURCE_DIR}/bme" "${PROJECT_BINARY_DIR}/bme")
+add_subdirectory("${PROJECT_SOURCE_DIR}/text_message" "${PROJECT_BINARY_DIR}/text_message")

@@ -222,7 +222,7 @@ int main() {
 
     while (1) {
         char s = getchar();
-        if (s == 'f') {
+        // if (s == 'f') {
             bme280_read_raw(&humidity, &pressure, &temperature);
             humidity = compensate_humidity(humidity);
             pressure = compensate_pressure(pressure);
@@ -231,7 +231,7 @@ int main() {
             printf("%d\n", pressure);
             printf("%.2f\n", temperature / 100.0);
             sleep_ms(200);
-        }
+        // }
     }
 #endif
 }
